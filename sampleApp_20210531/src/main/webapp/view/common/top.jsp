@@ -34,6 +34,7 @@
 	    <div id="ebase6_nav">
 
 		<!-- レイアウトは良い感じに直して -->
+		
 		<table id = "table_item">
 		<tr>
 		<td><a id="goodsView" href="javascript:void(0)">品物一覧 </a></td>

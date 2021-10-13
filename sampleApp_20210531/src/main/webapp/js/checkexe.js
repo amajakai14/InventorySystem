@@ -176,7 +176,7 @@ $(function(){
 			//実行ボタン作成
 			var btn = document.createElement("input");
 			btn.setAttribute('type',"button");
-			btn.setAttribute('value',messages['BTNSUBMIT']);
+			btn.setAttribute('value',messages['BTNSUBMITt']);
 			btn.setAttribute('id',"ebase6_popup_submit");
 			$('#ebase6_popup_foot').append(btn);
 			$('#ebase6_popup_submit').off("click"); //実行ボタンの処理を初期化

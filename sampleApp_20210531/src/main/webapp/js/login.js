@@ -11,7 +11,11 @@ $(function(){
 			//$.loginpopup = function(){
 
 				$('#datafield').empty();
-				$('#ebase6_controlmenu').remove();
+				$('#ebase6_controlmenu').hide();
+				$('#ebase6_mainmenu').hide();
+				$('#ebase6_submenu').hide();
+				$('#ebase6_nav').hide();
+
 
 				//ボディ部分生成
 				var field = document.getElementById("datafield");
@@ -67,7 +71,7 @@ $(function(){
 				thElem2.appendChild(tdElem2);
 
 				var input2 = document.createElement("input")
-				input2.setAttribute('type',"text");
+				input2.setAttribute('type',"password");
 				input2.setAttribute('size',32);
 				input2.setAttribute('id',"pass_word");
 				tdElem2.appendChild(input2);
@@ -109,6 +113,9 @@ $(function(){
 
 		$('#ebase6_initial_body').css('display', 'none');
 		$('#ebase6_shadow').css('display', 'none');
+		$('#ebase6_controlmenu').show();
+		$('#ebase6_mainmenu').show();
+		$('#ebase6_submenu').show();
 
 		}
 
@@ -180,7 +187,7 @@ $(function(){
 				thElem2.appendChild(tdElem2);
 
 				var input2 = document.createElement("input")
-				input2.setAttribute('type',"text");
+				input2.setAttribute('type',"password");
 				input2.setAttribute('size',32);
 				input2.setAttribute('id',"pass_word");
 				tdElem2.appendChild(input2);

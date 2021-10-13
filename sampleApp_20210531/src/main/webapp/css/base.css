@@ -7,20 +7,20 @@ body, a, table, td, th, div, pre, form, fieldset, dl, dt, dd, ul, ol, li, h1, h2
 
 /* A Style */
 /* 未訪問リンクの色をblueにする。*/
-a:link { text-decoration: underline; color: blue; }
+a:link { text-decoration: underline; color: #66ff33; }
 
 /* 訪問済みリンクの色を薄い青にする。*/
-a:visited { text-decoration: underline; color: #6666FF; }
+a:visited { text-decoration: underline; color: #808000; }
 
 /* マウスカーソルを乗せたリンクの色をblueにする */
-a:hover { text-decoration: underline; color: blue ; }
+a:hover { text-decoration: underline; color: #ff3385 ; }
 
 /* 選択リンクの色を濃い青にする */
-a:active { text-decoration: underline; color: #333399; }
+a:active { text-decoration: underline; color: #ff5500; }
 
 /* メインメニュー */
 #ebase6_mainmenu {
-	background-color :#ff0000;
+	background-color : #ff0000;
 	font-size : 32px;
 }
 
@@ -33,22 +33,23 @@ a:active { text-decoration: underline; color: #333399; }
 
 /* サブメニュー */
 #ebase6_submenu {
-	background-color :#a5a5a5;
+	background-color :#808040;
 	font-size : 32px;
-	text-align : center;
+	text-align : start;
 }
 
 /* サブメニューリスト*/
 #table_item {
    table-layout: fixed;     /* 固定レイアウト */
-   border-collapse: collapse; /* 隣接する枠線を重ねる */
-   border: 2px solid green;   /* 外枠：2px,実線,緑色 */
-   width: 400%;             /* 表の横幅：350ピクセル */
-   height : 60px;
-   text-align : center;
+   border-collapse: separate; /* 隣接する枠線を重ねる */
+   border-spacing: 10px;
+   border: 2px solid coral;   /* 外枠：2px,実線,緑色 */
+   width: 300%;             /* 表の横幅：350ピクセル */
+   height : 80px;
+   text-align : end;
 }
 table td {
-   border: 1px solid green; /* 表内側の線：1px,実線,緑色 */
+   border: 1px solid #000000; /* 表内側の線：1px,実線,緑色 */
    padding: 3px;            /* セル内側の余白：3ピクセル */
 }
 
@@ -56,13 +57,13 @@ table td {
 #new {
 	font-size: 1.4em;
 	padding: 10px 30px;
-	background-color: #FFCCFF;
+	background-color: #ff0080;
 }
 
 
 /* コントロールメニュー */
 #ebase6_controlmenu {
-	background-color : #FFF;/*#a5a5a5*/
+	background-color : #8000ff;/*#a5a5a5*/
 	position : fixed;
 	bottom : 0;
 	width : 100%;
@@ -71,7 +72,7 @@ table td {
 
 /* メニュー背景 */
 #ebase6_menulist {
-	background-color : #a5a5a5;
+	background-color : #408080;
 	position : fixed;
 	bottom : 120px;
 	left : 20px;
@@ -86,7 +87,7 @@ table td {
 
 /* メニュータイトル */
 #ebase6_menulist_title {
-	background-color : #bfbfff;
+	background-color : #808000;
 	color : #000000;
 	text-align : center;
 	position : fixed;
