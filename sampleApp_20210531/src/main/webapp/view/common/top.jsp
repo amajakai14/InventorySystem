@@ -19,32 +19,91 @@
 	<!-- Main Menu  -->
 	<div id="ebase6_mainmenu">
 		<button id="ebase6_logout" type="button">ログアウト</button>
+		
 		<!--Excellence Business Application System Executer 6  -->
 		在庫管理システム
+			<!-- Control Menu  //-->
+			<div id="ebase6_controlmenu">
+				<input id="ebase6_conmenu_mente" type="image" src="view/image/ico_mente_57_57.png" />
+			</div>
+		<input type="text" id="ebase_time_boxmain">
+		<br><br>
+		<script>
+		var today = new Date();
+		var hour = today.getHours();
+		if(hour <10){
+			hour = '0'+ hour
+		}
+		var minute = today.getMinutes();
+		if(minute <10){
+			minute = '0' + minute
+		}
+		var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		var time = hour + ":" + minute;
+		var dateTime = date+' '+time;
+ 		 document.getElementById("ebase_time_boxmain").value = dateTime;
+		</script>
+
+
 	</div>
 
 	<!-- Sub Menu -->
-	<div id="ebase6_submenu">
-		作業選択
-	</div>
+
 
 	<!-- Sub Menu List-->
 	<!-- Body  -->
 	<div id="ebase6_body">
+	
+		
+		<div id = "ebase6_bodyMaterial">
+		<!-- 
+			<div style="height:70%;overflow-x: scroll;  margin-left: 1em; overflow-y: visible; padding: 0;"><table id = "table_material">
+				<tr>
+					<th scope = 'col' style ="width:15%;">食材名</th>
+					<th scope = 'col' style ="width:5%;">単位</th>
+					<th scope = 'col' style ="width:5%;">単価</th>
+					<th scope = 'col' style ="width:10%;">消費期間</th>
+					<th scope = 'col' style ="width:10%;">仕入れ店</th>
+					<th scope = 'col' style ="width:10%;">発注日</th>
+					<th scope = 'col' style ="width:10%;">納品予定日</th>
+					<th scope = 'col' style ="width:10%;">発注数</th>
+					<th scope = 'col' style ="width:25%;">備考</th>
+				</tr>
+				
+				</table>
+			</div>
+			<button class ="ebase6_createButton">登録</button>
+			<button class ="ebase6_editButton">修正</button>
+			<div>
+			
+			
+			</div>-->
+		</div>
+ 		
 	    <div id="ebase6_nav">
 
 		<!-- レイアウトは良い感じに直して -->
 		
 		<table id = "table_item">
 		<tr>
-		<td><a id="goodsView" href="javascript:void(0)">品物一覧 </a></td>
-		<td><a id="stockManegement" href="javascript:void(0)">在庫管理 </a></td>
-		<td><a id="orderingWork" href="javascript:void(0)">発注作業 </a></td>
-		<td><a id="goodsCheck" href="javascript:void(0)">品物検品 </a></td>
-		<td><a id="Inventories" href="javascript:void(0)">棚卸作業 </a></td>
-		<td><a id="History" href="javascript:void(0)">履歴表示 </a></td>
+		<td>メニュー</td>
+		<td style="background-color:#6262bf"><a id="goodsView" href="javascript:void(0)">食材リスト </a></td>
+		<td style="background-color:#2de28d"><a id="PurchaseOrder" href="javascript:void(0)">発注 </a></td>
+		<td style="background-color:#f1d181"><a id="goodsInspt" href="javascript:void(0)">検品 </a></td>
+		<td style="background-color:#f5ff45"><a id="Inventory" href="javascript:void(0)">在庫一覧 </a></td>
+		<td style="background-color:#f1b51d"><a id="StockCount" href="javascript:void(0)">棚卸 </a></td>
+		<td style="background-color:#FF0000"><a id="IDRegister" href="javascript:void(0)">ユーザー登録 </a></td>
 		</tr>
 		</table>
+		<div id ="ebase6_NavButtonGroup">
+  			<button id ="ebase6_NavgoodsView" type="button">食材リスト</button>
+  			<button id ="ebase6_NavPurchaseOrder" type="button">発注</button><br>
+ 			<button id ="ebase6_NavgoodsInspt" type="button">検品</button>
+ 			<button id ="ebase6_NavInventory" type="button">在庫一覧</button><br>
+ 			<button id ="ebase6_NavStockCount" type="button">棚卸</button>
+ 			<button id ="ebase6_NavIDRegister" type="button">ユーザー登録 </button>
+		</div>
+
 
 	    	<!-- Mentenuce Menu List -->
 			<div id="ebase6_menulist">
@@ -55,6 +114,7 @@
 					<li><a id="dbexe" href="javascript:void(0)">DB SQL Execute</a></li>
 					<li><a id="addWork" href="javascript:void(0)">Add Work 20180322 Enya</a></li>
 				</ul>
+
 			</div>
 
 		</div>
@@ -64,10 +124,6 @@
 
 
 
-	<!-- Control Menu  //-->
-	<div id="ebase6_controlmenu">
-		<input id="ebase6_conmenu_mente" type="image" src="view/image/ico_mente_57_57.png" />
-	</div>
 
 	<!-- Shadow  -->
 	<!--<div id="ebase6_shadow"></div>-->
@@ -105,6 +161,9 @@
     	</div>
     	<div id="ebase6_popup_foot">
     	</div>
+	</div>
+	<div>
+	<button id ="ebase6_mainReturn" type="button">Mainに戻る </button>
 	</div>
 
 </body>

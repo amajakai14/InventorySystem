@@ -29,19 +29,35 @@ $(function(){
 				var initialView = document.createElement("div");
 				initialView.id = "ebase6_initial_body";
 				field.appendChild(initialView);
+				document.getElementById("ebase6_initial_body").style.paddingTop = "0px"
+				
 
 				//DOM型で要素をAppend
 				var initialhead = document.createElement("div");
 				initialhead.id = "ebase6_initial_head";
 				initialView.appendChild(initialhead);
-				$('#ebase6_initial_head').html("認証処理")
-				//initialhead.setAttribute('value',"認証処理");
+				$('#ebase6_initial_head').html("在庫管理システム")
+				//initialhead.setAttribute('value',"在庫管理システム");
+				//date time
+				var initialdate = document.createElement("div");
+				initialdate.id = `ebase_time_boxlogin`;
+				initialView.appendChild(initialdate);
+				$('#ebase_time_boxlogin').html("date")
 
+
+				//文言
+				var caution = document.createElement("div");
+				caution.id = "ebase6_initial_bottom";
+				initialView.appendChild(caution);				
+				caution.innerHTML = "ユーザー名、パスワードを入力してください";
+				caution.style.textAlign = 'Center';
+				caution.style.cssText = 'position:absolute;left:30px;top:50px'	
+				
 				//table要素でユーザー名、パスワードのフォームを作成
 				var table = document.createElement("table");
 				table.id = "login_ninsyo";
 				initialView.appendChild(table);
-
+				table.style.cssText = 'position:absolute;left:30px; bottom:50px';
 				//ユーザー名フォーム
 				var trElem1 = document.createElement("tr");
 				table.appendChild(trElem1);
@@ -52,11 +68,13 @@ $(function(){
 
 				var tdElem1 = document.createElement("td");
 				thElem1.appendChild(tdElem1);
-
+				
 				var input1 = document.createElement("input")
 				input1.setAttribute('type',"text");
 				input1.setAttribute('size',32);
 				input1.setAttribute('id',"user_name");
+				
+				
 				tdElem1.appendChild(input1);
 
 				//パスワードフォーム
@@ -76,18 +94,14 @@ $(function(){
 				input2.setAttribute('id',"pass_word");
 				tdElem2.appendChild(input2);
 
-				//文言
-				var caution = document.createElement("div");
-				caution.id = "ebase6_initial_bottom";
-				initialView.appendChild(caution);
-				caution.innerHTML = "ユーザー名、パスワードを入力してください";
 
 				//OKボタン
 				var okbutton = document.createElement("input")
 				okbutton.setAttribute('type',"button");
 				okbutton.setAttribute('id',"ebase6_logon");
-				okbutton.setAttribute('value',"OK");
-				okbutton.style.cssText = 'position:absolute;left:0px;bottom:0px';
+				okbutton.setAttribute('value',"Login");
+				okbutton.style.cssText = 'position:absolute;left:40%;bottom:10px';
+				okbutton.style.width = "100px"
 				initialView.appendChild(okbutton);
 				$('#ebase6_logon').off("click");
 				$('#ebase6_logon').on("click" , ninsyo );
@@ -95,7 +109,6 @@ $(function(){
 	//ログイン処理
 	//20210510 田中追記
 	function ninsyo() {
-
 		var user = $('#user_name').val();
 		var pass = $('#pass_word').val();
 
@@ -116,6 +129,7 @@ $(function(){
 		$('#ebase6_controlmenu').show();
 		$('#ebase6_mainmenu').show();
 		$('#ebase6_submenu').show();
+		$('#ebase6_nav').show();
 
 		}
 
@@ -150,7 +164,7 @@ $(function(){
 				var initialhead = document.createElement("div");
 				initialhead.id = "ebase6_initial_head";
 				initialView.appendChild(initialhead);
-				$('#ebase6_initial_head').html("認証処理")
+				$('#ebase6_initial_head').html("在庫管理システム")
 				//initialhead.setAttribute('value',"認証処理");
 
 				//table要素でユーザー名、パスワードのフォームを作成
@@ -202,7 +216,7 @@ $(function(){
 				var okbutton = document.createElement("input")
 				okbutton.setAttribute('type',"button");
 				okbutton.setAttribute('id',"ebase6_logon");
-				okbutton.setAttribute('value',"OK");
+				okbutton.setAttribute('value',"Login");
 				okbutton.style.cssText = 'position:absolute;left:0px;bottom:0px';
 				initialView.appendChild(okbutton);
 				$('#ebase6_logon').off("click");

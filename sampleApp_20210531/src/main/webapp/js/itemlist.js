@@ -10,7 +10,7 @@ $(function(){
 	//品物一覧表示
 	$.itemlist = function(){
 		$('#datafield').empty();
-    document.getElementById("ebase6_submenu").innerHTML="品物一覧";
+    document.getElementById("ebase6_bodyMaterial").innerHTML="食材リスト";
 
 
 		$('#dataTable').remove();
@@ -42,7 +42,6 @@ $(function(){
 			table.appendChild(theadElem);
 			theadElem.appendChild(trElem);
 
-			var ssSearch = document.getElementById("ss_select");
 
 			for(i=0;i<jres.keys.length;i++){
 				//テーブルにカラム名を表示
@@ -64,6 +63,7 @@ $(function(){
 				for(i=0;i<jres.keys.length;i++){
 					var tdElem = document.createElement("td");
 					trElem.appendChild(tdElem);
+					tdElem.style.background = "FC2604";
 				}
 			}
 
@@ -119,7 +119,7 @@ $(function(){
 		btn.setAttribute('type',"button");
 		btn.setAttribute('value',"新規登録");
 		btn.setAttribute('id',"new_sample");
-		btn.style.cssText = 'font-size:1.4em;padding: 10px 30px;background-color: #FFCCFF;position:absolute;top:80px;'
+		btn.style.cssText = 'font-size:1.4em;padding: 10px 30px;background-color: #FFCCFF;position:absolute;bottom:0px;'
 		$('#new_sample').off("click");
 		$('#new_sample').on("click" , newgoods );
 

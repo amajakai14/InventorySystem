@@ -21,7 +21,9 @@ $(function(){
 	$('a[id=goodsView]').click(function(){
 		$.itemlist();
 	});
-
+	$('#ebase6_NavgoodsView').click(function(){
+		$.itemlist();
+	});
 	//発注作業画面出力処理キック
 	$('a[id=orderingWork]').click(function(){
 		$.orderexe();
@@ -49,6 +51,7 @@ $(function(){
 		$('#datafield').empty();
 		document.getElementById("ebase6_submenu").innerHTML="履歴表示";
 	});
+
 
 
 });

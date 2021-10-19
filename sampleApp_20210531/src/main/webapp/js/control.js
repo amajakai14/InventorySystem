@@ -70,6 +70,54 @@ $(function(){
 		$("#ebase6_nav").animate({top: winTop + "px"}, "slow");
 
 	});
+	
+	//日付＆時刻を表示
+	$(document).ready(function(){
+	var today = new Date();
+	var hour = today.getHours();
+	if(hour <10){
+		hour = '0'+ hour
+	}
+	var minute = today.getMinutes();
+	if(minute <10){
+		minute = '0' + minute
+	}
+	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+	var time = hour + ":" + minute;
+	var dateTime = date+' '+time;
+  	document.getElementById("ebase_time_boxlogin").innerHTML = 'time : ' + dateTime;
+	document.getElementById("ebase_time_boxlogin").style.textAlign = 'right';
+	});
+		//menubar close
+	function menubarShow() {
+		$('#table_item').css('display', 'block');
+		$('#ebase6_mainReturn').css('display', 'block');
+		$('#ebase6_NavButtonGroup').css('display', 'none');
+	};
+		//return to main menu
+		function mainReturn(){
+		$('#table_item').css('display', 'none');
+		$('#ebase6_NavButtonGroup').css('display', 'block');		
+		$('#ebase6_mainReturn').css('display', 'none');
+	};
+		//Mainボタンをクリック
+		$('#ebase6_mainReturn').click(function(){
+		if($('#ebase6_mainReturn').css('display') == "block"){
+			mainReturn();
+		}
+	});
+ 		//食材リストボタンをクリック
+	$('#ebase6_NavgoodsView').click(function(){
+		if($('#table_item').css('display') == "none"){
+			menubarShow();
+			$('#ebase6_bodyMaterial').css('display', 'block');
+		}
+		
+	});
+	
+	
+	
+
 
 
 	//}
